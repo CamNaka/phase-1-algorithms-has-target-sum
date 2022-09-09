@@ -1,6 +1,21 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+
+  for (let i = 0; i < array.length; i++) {
+    let currentNum = target - array[i]
+
+    for (let j = i+1; j < array.length; j++) {
+      let comparingNum = array[j]
+      if(currentNum === comparingNum) return true; 
+    }
+  }
+  return false
 }
+
+
+
+
+
+
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,10 +23,21 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+
+function hasTargetSum(array, target)
+need to iterate through 'array'
+  need two iterations to iterate through 'array'
+    need to name interation index for both iterations
+      add iteration indexs together
+        if it is equal to 'target'
+          return true
+        else
+          return false
 */
 
 /*
   Add written explanation of your solution here
+
 */
 
 // You can run `node index.js` to view these console logs
